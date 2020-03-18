@@ -1,15 +1,15 @@
 # code your #valid_move? method here
 def valid_move?(board, index)
-  def position_taken?(board, index)
-    if ((board[index] == " " || board[index] == "" || board[index] == nil)
+  def position_taken?(array, ind)
+    if ((array[ind] == " " || array[ind] == "" || array[ind] == nil)
       return false
     else
       return true
     end
   end # end position_taken
 
-  def on_board?(index)
-    if (index > 0 && index < 10)
+  def on_board?(ind)
+    if (ind > 0 && ind < 10)
       return true
     else
       return false
