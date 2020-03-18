@@ -9,7 +9,7 @@ def valid_move?(board, index)
   end # end position_taken
 
   def on_board?(index)
-    if (index > 0 && index < 10))
+    if (index > 0 && index < 10)
       return true
     else
       return false
@@ -19,7 +19,7 @@ def valid_move?(board, index)
   # THIS IS WHERE THE LOGIC FOR valid_move COMES TOGETHER
   if (!position_taken? && on_board?)
     return true
-  else 
+  else
     return false
   end # end of logic
 
