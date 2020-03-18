@@ -16,8 +16,11 @@ def valid_move?(board, index)
     end
   end # end on_board?
 
-  # THIS IS WHERE THE LOGIC FOR valid_move comes together
+  # THIS IS WHERE THE LOGIC FOR valid_move COMES TOGETHER
   if (!position_taken? && on_board?)
     return true
+  else 
+    return false
+  end # end of logic
 
 end #end is_valid?
