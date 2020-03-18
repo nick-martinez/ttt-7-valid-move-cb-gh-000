@@ -1,17 +1,23 @@
 # code your #valid_move? method here
 def valid_move?(board, index)
-    if ((board[index] == " " || board[index] == "" || board[index] == nil) && (index > 0 && index < 10))
+  def position_taken?(board, index)
+    if ((board[index] == " " || board[index] == "" || board[index] == nil)
       return false
     else
       return true
     end
-end
+  end # end position_taken
 
-# re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
-def position_taken?(board, index)
-  if valid_move?
+  def on_board?(index)
+    if (index > 0 && index < 10))
+      return true
+    else
+      return false
+    end
+  end # end on_board?
+
+  # THIS IS WHERE THE LOGIC FOR valid_move comes together
+  if (!position_taken? && on_board?)
     return true
-  else
-    return false
-  end
-end
+
+end #end is_valid?
